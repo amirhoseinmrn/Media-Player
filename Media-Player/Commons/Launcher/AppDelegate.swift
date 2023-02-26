@@ -10,6 +10,8 @@ import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    var myOrientation: UIInterfaceOrientationMask = .allButUpsideDown
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         setupKeyboard()
@@ -19,6 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupKeyboard() {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.keyboardDistanceFromTextField = 80
+    }
+    
+    func application(_ application: UIApplication,
+                     supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return myOrientation
     }
 
     // MARK: UISceneSession Lifecycle
