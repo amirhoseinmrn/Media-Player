@@ -19,7 +19,6 @@
 		29C8A6ED29AB5A4B00A9EF1D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C8A6EB29AB5A4B00A9EF1D /* HomeViewController.xib */; };
 		29C8A6EF29AB5A6500A9EF1D /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A6EE29AB5A6500A9EF1D /* HomeViewController+TableView.swift */; };
 		29C8A6F129AB5A7A00A9EF1D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A6F029AB5A7A00A9EF1D /* HomeViewModel.swift */; };
-		29C8A6F329AB5A9100A9EF1D /* HomeViewModel+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A6F229AB5A9100A9EF1D /* HomeViewModel+Request.swift */; };
 		29C8A6F529AB5AAC00A9EF1D /* HomeViewController+Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A6F429AB5AAC00A9EF1D /* HomeViewController+Binding.swift */; };
 		29C8A6FA29AB64DF00A9EF1D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A6F929AB64DF00A9EF1D /* Result.swift */; };
 		29C8A6FC29AB650D00A9EF1D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A6FB29AB650D00A9EF1D /* BaseViewController.swift */; };
@@ -33,6 +32,12 @@
 		29C8A70D29AB8A3B00A9EF1D /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A70C29AB8A3B00A9EF1D /* Styles.swift */; };
 		29C8A71129AB8DAC00A9EF1D /* DetailVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A70F29AB8DAC00A9EF1D /* DetailVideoViewController.swift */; };
 		29C8A71229AB8DAC00A9EF1D /* DetailVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C8A71029AB8DAC00A9EF1D /* DetailVideoViewController.xib */; };
+		29C8A71429AB961200A9EF1D /* ListVideoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A71329AB961200A9EF1D /* ListVideoRequest.swift */; };
+		29C8A71629AB962500A9EF1D /* ListVideoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A71529AB962500A9EF1D /* ListVideoResponse.swift */; };
+		29C8A71829AB964900A9EF1D /* ListVideoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A71729AB964900A9EF1D /* ListVideoServiceProtocol.swift */; };
+		29C8A71A29AB965200A9EF1D /* ListVideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A71929AB965200A9EF1D /* ListVideoService.swift */; };
+		29C8A71C29AB983200A9EF1D /* PaginableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A71B29AB983200A9EF1D /* PaginableResponse.swift */; };
+		29C8A71E29ABA64B00A9EF1D /* ListVideoPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A71D29ABA64B00A9EF1D /* ListVideoPO.swift */; };
 		50A6EF95D985C93D7E1941FC /* Pods_Media_Player_Media_PlayerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64F15F282623211693A8A81B /* Pods_Media_Player_Media_PlayerUITests.framework */; };
 		BC93031B9932B9B0BAB13B83 /* Pods_Media_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB86E5C77D6E3CFC8E4B7320 /* Pods_Media_Player.framework */; };
 /* End PBXBuildFile section */
@@ -71,7 +76,6 @@
 		29C8A6EB29AB5A4B00A9EF1D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		29C8A6EE29AB5A6500A9EF1D /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
 		29C8A6F029AB5A7A00A9EF1D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		29C8A6F229AB5A9100A9EF1D /* HomeViewModel+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewModel+Request.swift"; sourceTree = "<group>"; };
 		29C8A6F429AB5AAC00A9EF1D /* HomeViewController+Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Binding.swift"; sourceTree = "<group>"; };
 		29C8A6F929AB64DF00A9EF1D /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		29C8A6FB29AB650D00A9EF1D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,12 @@
 		29C8A70C29AB8A3B00A9EF1D /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		29C8A70F29AB8DAC00A9EF1D /* DetailVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVideoViewController.swift; sourceTree = "<group>"; };
 		29C8A71029AB8DAC00A9EF1D /* DetailVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailVideoViewController.xib; sourceTree = "<group>"; };
+		29C8A71329AB961200A9EF1D /* ListVideoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVideoRequest.swift; sourceTree = "<group>"; };
+		29C8A71529AB962500A9EF1D /* ListVideoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVideoResponse.swift; sourceTree = "<group>"; };
+		29C8A71729AB964900A9EF1D /* ListVideoServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVideoServiceProtocol.swift; sourceTree = "<group>"; };
+		29C8A71929AB965200A9EF1D /* ListVideoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVideoService.swift; sourceTree = "<group>"; };
+		29C8A71B29AB983200A9EF1D /* PaginableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginableResponse.swift; sourceTree = "<group>"; };
+		29C8A71D29ABA64B00A9EF1D /* ListVideoPO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVideoPO.swift; sourceTree = "<group>"; };
 		4830F5A3B562069DAB5A5BF0 /* Pods-Media-Player-Media-PlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Media-Player-Media-PlayerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Media-Player-Media-PlayerUITests/Pods-Media-Player-Media-PlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		64F15F282623211693A8A81B /* Pods_Media_Player_Media_PlayerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Media_Player_Media_PlayerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		707E07C3E73DF166E5AB9654 /* Pods-Media-Player-Media-PlayerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Media-Player-Media-PlayerUITests.release.xcconfig"; path = "Target Support Files/Pods-Media-Player-Media-PlayerUITests/Pods-Media-Player-Media-PlayerUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -252,6 +262,7 @@
 			children = (
 				29C8A70329AB7FA100A9EF1D /* Connectivity.swift */,
 				29C8A6F929AB64DF00A9EF1D /* Result.swift */,
+				29C8A71B29AB983200A9EF1D /* PaginableResponse.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -263,7 +274,6 @@
 				29C8A6F729AB5C3F00A9EF1D /* TableViewCell */,
 				29C8A6F629AB5C3600A9EF1D /* ServiceDetail */,
 				29C8A6F029AB5A7A00A9EF1D /* HomeViewModel.swift */,
-				29C8A6F229AB5A9100A9EF1D /* HomeViewModel+Request.swift */,
 				29C8A6F429AB5AAC00A9EF1D /* HomeViewController+Binding.swift */,
 				29C8A6EE29AB5A6500A9EF1D /* HomeViewController+TableView.swift */,
 				29C8A6EA29AB5A4B00A9EF1D /* HomeViewController.swift */,
@@ -275,6 +285,10 @@
 		29C8A6F629AB5C3600A9EF1D /* ServiceDetail */ = {
 			isa = PBXGroup;
 			children = (
+				29C8A71329AB961200A9EF1D /* ListVideoRequest.swift */,
+				29C8A71529AB962500A9EF1D /* ListVideoResponse.swift */,
+				29C8A71729AB964900A9EF1D /* ListVideoServiceProtocol.swift */,
+				29C8A71929AB965200A9EF1D /* ListVideoService.swift */,
 			);
 			path = ServiceDetail;
 			sourceTree = "<group>";
@@ -291,6 +305,7 @@
 		29C8A6F829AB5C4900A9EF1D /* PO */ = {
 			isa = PBXGroup;
 			children = (
+				29C8A71D29ABA64B00A9EF1D /* ListVideoPO.swift */,
 			);
 			path = PO;
 			sourceTree = "<group>";
@@ -576,23 +591,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29C8A71C29AB983200A9EF1D /* PaginableResponse.swift in Sources */,
 				298C665029AB3DFA00A9A4A2 /* AppDelegate.swift in Sources */,
 				29C8A6FE29AB651500A9EF1D /* BaseViewModel.swift in Sources */,
 				29C8A70729AB846500A9EF1D /* HomeTableViewCell.swift in Sources */,
 				298C665229AB3DFA00A9A4A2 /* SceneDelegate.swift in Sources */,
 				29C8A6EC29AB5A4B00A9EF1D /* HomeViewController.swift in Sources */,
-				29C8A6F329AB5A9100A9EF1D /* HomeViewModel+Request.swift in Sources */,
 				29C8A6F529AB5AAC00A9EF1D /* HomeViewController+Binding.swift in Sources */,
 				29C8A70D29AB8A3B00A9EF1D /* Styles.swift in Sources */,
 				29C8A6FC29AB650D00A9EF1D /* BaseViewController.swift in Sources */,
+				29C8A71E29ABA64B00A9EF1D /* ListVideoPO.swift in Sources */,
 				29C8A6F129AB5A7A00A9EF1D /* HomeViewModel.swift in Sources */,
+				29C8A71A29AB965200A9EF1D /* ListVideoService.swift in Sources */,
 				29C8A70429AB7FA100A9EF1D /* Connectivity.swift in Sources */,
+				29C8A71629AB962500A9EF1D /* ListVideoResponse.swift in Sources */,
 				29C8A71129AB8DAC00A9EF1D /* DetailVideoViewController.swift in Sources */,
 				29C8A70A29AB84D600A9EF1D /* Extensions.swift in Sources */,
 				29C8A6FA29AB64DF00A9EF1D /* Result.swift in Sources */,
 				29C8A70229AB652F00A9EF1D /* BaseSerializerCodable.swift in Sources */,
+				29C8A71429AB961200A9EF1D /* ListVideoRequest.swift in Sources */,
 				29C8A6EF29AB5A6500A9EF1D /* HomeViewController+TableView.swift in Sources */,
 				29C8A70029AB651B00A9EF1D /* BaseService.swift in Sources */,
+				29C8A71829AB964900A9EF1D /* ListVideoServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

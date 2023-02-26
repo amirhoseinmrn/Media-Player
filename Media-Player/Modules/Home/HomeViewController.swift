@@ -11,10 +11,14 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     lazy var searchBar = UISearchBar(frame: CGRect.zero)
     
+    lazy var viewModel = HomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBar()
         setupTableView()
+        bind()
+        viewModel.getListVideo(isRefresh: true)
     }
     
     func setupSearchBar() {

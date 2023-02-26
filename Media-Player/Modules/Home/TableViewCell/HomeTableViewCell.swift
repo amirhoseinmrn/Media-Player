@@ -23,9 +23,9 @@ class HomeTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func config(indexpath: IndexPath) {
-        self.titleLabel.text = "Title \(indexpath.row)"
-        self.descriptionLabel.text = "This the description of \(indexpath.row)"
+    func config(data: VideoModel) {
+        self.titleLabel.text = data.name
+        self.descriptionLabel.text = data.description
     }
     
     func setupFont() {
