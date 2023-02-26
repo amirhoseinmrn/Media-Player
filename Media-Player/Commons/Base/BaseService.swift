@@ -10,7 +10,7 @@ import Alamofire
 public class BaseService {
     var header: HTTPHeaders {
         return HTTPHeaders([
-            "Authorization": "Bearer "
+            "Authorization": "bearer 1cd16c427881323a22f092cfb6dbceaf"
         ])
     }
     
