@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (5.6.2)
+  - CRRefresh (1.1.3)
+  - IQKeyboardManagerSwift (6.5.10)
+  - ObjectMapper (4.2.0)
+  - SwiftLint (0.49.1)
+  - UIView-Shimmer (1.0.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - CRRefresh
+  - IQKeyboardManagerSwift
+  - ObjectMapper
+  - SwiftLint
+  - UIView-Shimmer
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CRRefresh
+    - IQKeyboardManagerSwift
+    - ObjectMapper
+    - SwiftLint
+    - UIView-Shimmer
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  CRRefresh: 1415d4ae06837fa7bb064c44f2e102f3ef517044
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  SwiftLint: 32ee33ded0636d0905ef6911b2b67bbaeeedafa5
+  UIView-Shimmer: ff0a32c73d67c7dbdea3d9e530538b10d18aea56
+
+PODFILE CHECKSUM: 500a794353f0e466cac33d6f1302585b6586da80
+
+COCOAPODS: 1.11.3
