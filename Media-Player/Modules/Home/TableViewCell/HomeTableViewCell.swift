@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var thumbnailImageView: UIImageView!
@@ -24,8 +25,11 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     func config(data: VideoModel) {
-        self.titleLabel.text = data.name
-        self.descriptionLabel.text = data.description
+        titleLabel.text = data.name
+        descriptionLabel.text = data.description
+        let url = data.pictures?.baseLink ?? ""
+        thumbnailImageView.sd_setImage(with: URL(string: url),
+                                       placeholderImage: Images.namavaLogo.image)
     }
     
     func setupFont() {
