@@ -15,7 +15,10 @@ class DetailVideoViewController: BaseViewController {
     @IBOutlet weak var commentCountButton: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    init() {
+    var viewModel: DetailVideoViewModel
+    
+    init(viewModel: DetailVideoViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: DetailVideoViewController.nameOfClass, bundle: nil)
     }
     
@@ -28,6 +31,7 @@ class DetailVideoViewController: BaseViewController {
         setupColor()
         setupFont()
         setupUI()
+        setupData()
     }
     
     func setupColor() {
@@ -40,6 +44,16 @@ class DetailVideoViewController: BaseViewController {
     
     func setupUI() {
         thumbnailImageView.layer.cornerRadius = BorderStyles.defaultCornerRadius.rawValue
+    }
+    
+    func setupData() {
+        title = viewModel.data.name
+        descriptionLabel.text = viewModel.data.description
+        playCountButton.setTitle("0", for: .normal)
+        let likeCount = viewModel.data.metadata?.connections?.likes?.total ?? 0
+        likeCountButton.setTitle(String(likeCount), for: .normal)
+        let commentCount = viewModel.data.metadata?.connections?.comments?.total ?? 0
+        commentCountButton.setTitle(String(commentCount), for: .normal)
     }
 
     @IBAction func playButtonPressed(_ sender: Any) {
