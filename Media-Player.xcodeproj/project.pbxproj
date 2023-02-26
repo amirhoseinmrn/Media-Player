@@ -31,6 +31,8 @@
 		29C8A70829AB846500A9EF1D /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C8A70629AB846500A9EF1D /* HomeTableViewCell.xib */; };
 		29C8A70A29AB84D600A9EF1D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A70929AB84D600A9EF1D /* Extensions.swift */; };
 		29C8A70D29AB8A3B00A9EF1D /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A70C29AB8A3B00A9EF1D /* Styles.swift */; };
+		29C8A71129AB8DAC00A9EF1D /* DetailVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8A70F29AB8DAC00A9EF1D /* DetailVideoViewController.swift */; };
+		29C8A71229AB8DAC00A9EF1D /* DetailVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C8A71029AB8DAC00A9EF1D /* DetailVideoViewController.xib */; };
 		50A6EF95D985C93D7E1941FC /* Pods_Media_Player_Media_PlayerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64F15F282623211693A8A81B /* Pods_Media_Player_Media_PlayerUITests.framework */; };
 		BC93031B9932B9B0BAB13B83 /* Pods_Media_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB86E5C77D6E3CFC8E4B7320 /* Pods_Media_Player.framework */; };
 /* End PBXBuildFile section */
@@ -81,6 +83,8 @@
 		29C8A70629AB846500A9EF1D /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		29C8A70929AB84D600A9EF1D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		29C8A70C29AB8A3B00A9EF1D /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		29C8A70F29AB8DAC00A9EF1D /* DetailVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVideoViewController.swift; sourceTree = "<group>"; };
+		29C8A71029AB8DAC00A9EF1D /* DetailVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailVideoViewController.xib; sourceTree = "<group>"; };
 		4830F5A3B562069DAB5A5BF0 /* Pods-Media-Player-Media-PlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Media-Player-Media-PlayerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Media-Player-Media-PlayerUITests/Pods-Media-Player-Media-PlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		64F15F282623211693A8A81B /* Pods_Media_Player_Media_PlayerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Media_Player_Media_PlayerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		707E07C3E73DF166E5AB9654 /* Pods-Media-Player-Media-PlayerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Media-Player-Media-PlayerUITests.release.xcconfig"; path = "Target Support Files/Pods-Media-Player-Media-PlayerUITests/Pods-Media-Player-Media-PlayerUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -302,6 +306,8 @@
 		29C8A70E29AB8B2600A9EF1D /* DetailVideo */ = {
 			isa = PBXGroup;
 			children = (
+				29C8A70F29AB8DAC00A9EF1D /* DetailVideoViewController.swift */,
+				29C8A71029AB8DAC00A9EF1D /* DetailVideoViewController.xib */,
 			);
 			path = DetailVideo;
 			sourceTree = "<group>";
@@ -440,6 +446,7 @@
 			files = (
 				298C665C29AB3DFD00A9A4A2 /* LaunchScreen.storyboard in Resources */,
 				298C665929AB3DFD00A9A4A2 /* Assets.xcassets in Resources */,
+				29C8A71229AB8DAC00A9EF1D /* DetailVideoViewController.xib in Resources */,
 				29C8A70829AB846500A9EF1D /* HomeTableViewCell.xib in Resources */,
 				29C8A6ED29AB5A4B00A9EF1D /* HomeViewController.xib in Resources */,
 			);
@@ -580,6 +587,7 @@
 				29C8A6FC29AB650D00A9EF1D /* BaseViewController.swift in Sources */,
 				29C8A6F129AB5A7A00A9EF1D /* HomeViewModel.swift in Sources */,
 				29C8A70429AB7FA100A9EF1D /* Connectivity.swift in Sources */,
+				29C8A71129AB8DAC00A9EF1D /* DetailVideoViewController.swift in Sources */,
 				29C8A70A29AB84D600A9EF1D /* Extensions.swift in Sources */,
 				29C8A6FA29AB64DF00A9EF1D /* Result.swift in Sources */,
 				29C8A70229AB652F00A9EF1D /* BaseSerializerCodable.swift in Sources */,
@@ -758,7 +766,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Media-Player/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -787,7 +795,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Media-Player/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
