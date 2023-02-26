@@ -13,6 +13,9 @@ class HomeViewModel: BaseViewModel,
     var listVideoResponse: Paginable<VideoModel>?
     var listVideoChangeHandler: ((BaseViewModelChange) -> Void)?
     
+    lazy var searchData = [VideoModel]()
+    lazy var isSearch = false
+    
     init(listVideoService: ListVideoServiceProtocol = ListVideoService()) {
         self.listVideoService = listVideoService
     }
