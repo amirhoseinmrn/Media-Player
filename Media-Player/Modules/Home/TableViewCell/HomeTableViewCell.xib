@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="Media_Player" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="133"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="133"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="namava-logo" translatesAutoresizingMaskIntoConstraints="NO" id="AFg-mZ-t8o">
+                        <rect key="frame" x="16" y="10" width="129" height="113"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="AFg-mZ-t8o" secondAttribute="height" multiplier="8:7" id="t1m-d9-Je9"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTr-N7-T7z">
+                        <rect key="frame" x="160" y="14.999999999999998" width="145" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yax-s1-kLO">
+                        <rect key="frame" x="160" y="45.333333333333336" width="145" height="21.000000000000007"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Yax-s1-kLO" firstAttribute="leading" secondItem="AFg-mZ-t8o" secondAttribute="trailing" constant="15" id="5P9-2q-eZu"/>
+                    <constraint firstItem="AFg-mZ-t8o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Bsw-mp-InD"/>
+                    <constraint firstItem="AFg-mZ-t8o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="CRN-nk-od1"/>
+                    <constraint firstAttribute="trailing" secondItem="JTr-N7-T7z" secondAttribute="trailing" constant="15" id="Cg7-dg-bia"/>
+                    <constraint firstItem="AFg-mZ-t8o" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LFz-MG-HrH"/>
+                    <constraint firstItem="JTr-N7-T7z" firstAttribute="leading" secondItem="AFg-mZ-t8o" secondAttribute="trailing" constant="15" id="OZq-0g-rI4"/>
+                    <constraint firstItem="JTr-N7-T7z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Ou6-R4-3dc"/>
+                    <constraint firstAttribute="bottom" secondItem="AFg-mZ-t8o" secondAttribute="bottom" constant="10" id="bwA-kL-i23"/>
+                    <constraint firstItem="Yax-s1-kLO" firstAttribute="top" secondItem="JTr-N7-T7z" secondAttribute="bottom" constant="10" id="oai-a0-cOd"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Yax-s1-kLO" secondAttribute="bottom" constant="10" id="pZ3-SY-ioX"/>
+                    <constraint firstAttribute="trailing" secondItem="Yax-s1-kLO" secondAttribute="trailing" constant="15" id="xHT-pR-bhR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="Yax-s1-kLO" id="Ovt-S2-G9Q"/>
+                <outlet property="thumbnailImageView" destination="AFg-mZ-t8o" id="7ur-Dl-Pgd"/>
+                <outlet property="titleLabel" destination="JTr-N7-T7z" id="y5N-CO-ZZr"/>
+            </connections>
+            <point key="canvasLocation" x="109.9236641221374" y="18.661971830985916"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="namava-logo" width="133.33332824707031" height="71.666664123535156"/>
+    </resources>
+</document>
