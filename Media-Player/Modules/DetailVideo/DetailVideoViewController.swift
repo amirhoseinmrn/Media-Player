@@ -48,6 +48,9 @@ class DetailVideoViewController: BaseViewController {
     
     func setupData() {
         title = viewModel.data.name
+        let url = viewModel.data.pictures?.baseLink ?? ""
+        thumbnailImageView.sd_setImage(with: URL(string: url),
+                                       placeholderImage: Images.namavaLogo.image)
         descriptionLabel.text = viewModel.data.description
         playCountButton.setTitle("0", for: .normal)
         let likeCount = viewModel.data.metadata?.connections?.likes?.total ?? 0
@@ -57,6 +60,9 @@ class DetailVideoViewController: BaseViewController {
     }
 
     @IBAction func playButtonPressed(_ sender: Any) {
-        
+        let playVideoViewModel = PlayVideoViewModel(url: viewModel.data.playerEmbedURL ?? "")
+        let vc = PlayVideoViewController(viewModel: playVideoViewModel)
+        vc.title = viewModel.data.name
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
