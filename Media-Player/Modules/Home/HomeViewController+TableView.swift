@@ -31,6 +31,8 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
+        let vc = DetailVideoViewController()
+        vc.title = "Title \(indexPath.row)"
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
