@@ -13,7 +13,7 @@ class DetailVideoViewController: BaseViewController {
     @IBOutlet weak var playCountButton: UIButton!
     @IBOutlet weak var likeCountButton: UIButton!
     @IBOutlet weak var commentCountButton: UIButton!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
     var viewModel: DetailVideoViewModel
     
@@ -35,11 +35,11 @@ class DetailVideoViewController: BaseViewController {
     }
     
     func setupColor() {
-        descriptionLabel.textColor = UIColor.label
+        descriptionTextView.textColor = UIColor.label
     }
     
     func setupFont() {
-        descriptionLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        descriptionTextView.font = UIFont.preferredFont(forTextStyle: .body)
     }
     
     func setupUI() {
@@ -51,8 +51,9 @@ class DetailVideoViewController: BaseViewController {
         let url = viewModel.data.pictures?.baseLink ?? ""
         thumbnailImageView.sd_setImage(with: URL(string: url),
                                        placeholderImage: Images.namavaLogo.image)
-        descriptionLabel.text = viewModel.data.description
-        playCountButton.setTitle("0", for: .normal)
+        descriptionTextView.text = viewModel.data.description
+        let playCount = viewModel.data.stats?.plays ?? 0
+        playCountButton.setTitle(String(playCount), for: .normal)
         let likeCount = viewModel.data.metadata?.connections?.likes?.total ?? 0
         likeCountButton.setTitle(String(likeCount), for: .normal)
         let commentCount = viewModel.data.metadata?.connections?.comments?.total ?? 0
@@ -60,7 +61,7 @@ class DetailVideoViewController: BaseViewController {
     }
 
     @IBAction func playButtonPressed(_ sender: Any) {
-        let playVideoViewModel = PlayVideoViewModel(url: viewModel.data.playerEmbedURL ?? "")
+        let playVideoViewModel = PlayVideoViewModel(html: viewModel.data.embed?.html ?? "")
         let vc = PlayVideoViewController(viewModel: playVideoViewModel)
         vc.title = viewModel.data.name
         navigationController?.pushViewController(vc, animated: true)
