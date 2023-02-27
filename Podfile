@@ -8,11 +8,8 @@ target 'Media-Player' do
 
   # Pods for Media-Player
 pod 'IQKeyboardManagerSwift'
-pod 'ObjectMapper'
 pod 'Alamofire'
-pod 'CRRefresh'
 pod 'SwiftLint'
-pod 'UIView-Shimmer'
 pod 'SDWebImage'
 
   target 'Media-PlayerTests' do
