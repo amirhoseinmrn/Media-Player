@@ -269,14 +269,11 @@
 		29C8A6E929AB5A2500A9EF1D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				29C8A73429AD59CF00A9EF1D /* View */,
+				29C8A73329AD59C600A9EF1D /* ViewModel */,
 				29C8A6F829AB5C4900A9EF1D /* PO */,
 				29C8A6F729AB5C3F00A9EF1D /* TableViewCell */,
 				29C8A6F629AB5C3600A9EF1D /* ServiceDetail */,
-				29C8A6F029AB5A7A00A9EF1D /* HomeViewModel.swift */,
-				29C8A6F429AB5AAC00A9EF1D /* HomeViewController+Binding.swift */,
-				29C8A6EE29AB5A6500A9EF1D /* HomeViewController+TableView.swift */,
-				29C8A6EA29AB5A4B00A9EF1D /* HomeViewController.swift */,
-				29C8A6EB29AB5A4B00A9EF1D /* HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -321,9 +318,8 @@
 		29C8A70E29AB8B2600A9EF1D /* DetailVideo */ = {
 			isa = PBXGroup;
 			children = (
-				29C8A71F29AC0D1000A9EF1D /* DetailVideoViewModel.swift */,
-				29C8A70F29AB8DAC00A9EF1D /* DetailVideoViewController.swift */,
-				29C8A71029AB8DAC00A9EF1D /* DetailVideoViewController.xib */,
+				29C8A73629AD59E600A9EF1D /* ViewModel */,
+				29C8A73529AD59E100A9EF1D /* View */,
 			);
 			path = DetailVideo;
 			sourceTree = "<group>";
@@ -331,9 +327,8 @@
 		29C8A72329AC1C4F00A9EF1D /* PlayVideo */ = {
 			isa = PBXGroup;
 			children = (
-				29C8A72829AC1D3900A9EF1D /* PlayVideoViewModel.swift */,
-				29C8A72429AC1C6A00A9EF1D /* PlayVideoViewController.swift */,
-				29C8A72529AC1C6A00A9EF1D /* PlayVideoViewController.xib */,
+				29C8A73829AD59F200A9EF1D /* ViewModel */,
+				29C8A73729AD59EC00A9EF1D /* View */,
 			);
 			path = PlayVideo;
 			sourceTree = "<group>";
@@ -354,6 +349,59 @@
 				29C8A70629AB846500A9EF1D /* HomeTableViewCell.xib */,
 			);
 			path = itemCell;
+			sourceTree = "<group>";
+		};
+		29C8A73329AD59C600A9EF1D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				29C8A6F029AB5A7A00A9EF1D /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		29C8A73429AD59CF00A9EF1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				29C8A6F429AB5AAC00A9EF1D /* HomeViewController+Binding.swift */,
+				29C8A6EE29AB5A6500A9EF1D /* HomeViewController+TableView.swift */,
+				29C8A6EA29AB5A4B00A9EF1D /* HomeViewController.swift */,
+				29C8A6EB29AB5A4B00A9EF1D /* HomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		29C8A73529AD59E100A9EF1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				29C8A70F29AB8DAC00A9EF1D /* DetailVideoViewController.swift */,
+				29C8A71029AB8DAC00A9EF1D /* DetailVideoViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		29C8A73629AD59E600A9EF1D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				29C8A71F29AC0D1000A9EF1D /* DetailVideoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		29C8A73729AD59EC00A9EF1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				29C8A72429AC1C6A00A9EF1D /* PlayVideoViewController.swift */,
+				29C8A72529AC1C6A00A9EF1D /* PlayVideoViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		29C8A73829AD59F200A9EF1D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				29C8A72829AC1D3900A9EF1D /* PlayVideoViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		55097198FE67D2F64F98C593 /* Pods */ = {
