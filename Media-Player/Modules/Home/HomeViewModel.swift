@@ -13,8 +13,7 @@ class HomeViewModel: BaseViewModel,
     var listVideoResponse: Paginable<VideoModel>?
     var listVideoChangeHandler: ((BaseViewModelChange) -> Void)?
     
-    lazy var searchData = [VideoModel]()
-    lazy var isSearch = false
+    var query: String?
     
     init(listVideoService: ListVideoServiceProtocol = ListVideoService()) {
         self.listVideoService = listVideoService
@@ -25,8 +24,8 @@ extension HomeViewModel {
     func getListVideo(isRefresh: Bool = false) {
         var page = (listVideoResponse?.page ?? 0) + 1
         if isRefresh { page = 1 }
-        let perPage = 10
-        let request = ListVideoRequest(page: page, perPage: perPage)
-        listVideo(request: request, isRefresh: true)
+        guard let query = query else { return }
+        let request = ListVideoRequest(page: page, query: query)
+        listVideo(request: request, isRefresh: isRefresh)
     }
 }

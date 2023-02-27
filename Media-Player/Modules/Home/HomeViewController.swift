@@ -32,25 +32,28 @@ class HomeViewController: BaseViewController {
         tableView.dataSource = self
         tableView.delegate = self
         HomeTableViewCell.register(for: tableView)
+        setEmptyMessage()
     }
 }
 
 extension HomeViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.isEmpty {
-            viewModel.searchData = []
-            viewModel.isSearch = false
+        if searchText == " " || searchText.isEmpty {
+            viewModel.listVideoResponse = nil
+            viewModel.query = nil
+            viewModel.listVideoService.dataRequest?.cancel()
             tableView.reloadData()
+            setEmptyMessage()
             return
         }
-        let data = viewModel.listVideoResponse?.data ?? []
-        let searchData = data.filter {
-            let name = $0.name ?? ""
-            return name.lowercased().contains(searchText.lowercased())
-        }
-        viewModel.searchData = searchData
-        viewModel.isSearch = true
+        viewModel.query = searchText
+        viewModel.listVideoResponse = nil
+        viewModel.getListVideo(isRefresh: true)
         tableView.reloadData()
+    }
+    
+    func setEmptyMessage() {
+        tableView.setEmptyMessage("There is no video\n Please search in searchbar...")
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

@@ -13,14 +13,10 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let isSearch = viewModel.isSearch
-        let searchCount = viewModel.searchData.count
-        let dataCount = viewModel.listVideoResponse?.data.count ?? 0
-        let count = isSearch ? searchCount : dataCount
-        if viewModel.listVideoResponse == nil {
+        let data = viewModel.listVideoResponse?.data
+        let count = data?.count ?? 0
+        if data == nil {
             return count
-        } else if count == 0 {
-            tableView.setEmptyMessage("There is no Data\n Refresh to get new Video")
         } else {
             tableView.restore()
         }
@@ -30,7 +26,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.nameOfClass,
                                                  for: indexPath) as? HomeTableViewCell
-        if let data = indexPathData(indexPath: indexPath) {
+        if let data = viewModel.listVideoResponse?.data[indexPath.row] {
             cell?.config(data: data)
         }
         loadNewData(indexPath: indexPath)
@@ -50,24 +46,13 @@ extension HomeViewController: UITableViewDataSource {
             }
         }
     }
-    
-    func indexPathData(indexPath: IndexPath) -> VideoModel? {
-        let isSearch = viewModel.isSearch
-        if isSearch {
-            let searchData = viewModel.searchData[indexPath.row]
-            return searchData
-        } else if let data = viewModel.listVideoResponse?.data[indexPath.row] {
-            return data
-        }
-        return nil
-    }
 }
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         searchBar.endEditing(true)
-        guard let data = indexPathData(indexPath: indexPath) else { return }
+        guard let data = viewModel.listVideoResponse?.data[indexPath.row] else { return }
         let detailVideoViewModel = DetailVideoViewModel(data: data)
         let vc = DetailVideoViewController(viewModel: detailVideoViewModel)
         navigationController?.pushViewController(vc, animated: true)
