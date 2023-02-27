@@ -25,7 +25,6 @@ class PlayVideoViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         loadWebView()
         setLandScape()
     }
@@ -35,32 +34,9 @@ class PlayVideoViewController: BaseViewController {
         setPortrait()
     }
     
-    func setLandScape() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.myOrientation = .landscapeRight
-        UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
-        UIView.setAnimationsEnabled(true)
-    }
-    
-    func setPortrait() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.myOrientation = .allButUpsideDown
-        UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
-        UIView.setAnimationsEnabled(true)
-    }
-    
-    func setupUI() {
-//        webView.backgroundColor = .systemBackground
-    }
-    
     func loadWebView() {
-        if let url = URL(string: viewModel.url) {
-            let request = URLRequest(url: url)
-            DispatchQueue.main.async {
-                self.webView.load(request)
-            }
-        } else {
-            navigationController?.popViewController(animated: true)
+        DispatchQueue.main.async {
+            self.webView.loadHTMLString(self.viewModel.html, baseURL: nil)
         }
     }
 }
