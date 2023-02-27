@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class HomeTableViewCell: UITableViewCell {
+class HomeTableViewCell: BaseHomeCell {
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -24,7 +24,7 @@ class HomeTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func config(data: VideoModel) {
+    override func config(data: VideoModel) {
         titleLabel.text = data.name
         descriptionLabel.text = data.description
         let url = data.pictures?.baseLink ?? ""
