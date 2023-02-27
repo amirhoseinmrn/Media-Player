@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol ListVideoServiceProtocol {
+    var dataRequest: DataRequest? { get set }
     func listVideos(request: ListVideoRequest,
                     _ completion: @escaping (Result<Paginable<VideoModel>>) -> Void)
 }
