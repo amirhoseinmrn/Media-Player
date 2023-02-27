@@ -24,13 +24,15 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.nameOfClass,
-                                                 for: indexPath) as? HomeTableViewCell
+        let tableCellBuilder = HomeCellBuilder()
+        let cell = tableCellBuilder.build(type: .video,
+                                          tableView: tableView,
+                                          indexPath: indexPath)
         if let data = viewModel.listVideoResponse?.data[indexPath.row] {
-            cell?.config(data: data)
+            cell.config(data: data)
         }
         loadNewData(indexPath: indexPath)
-        return cell ?? UITableViewCell()
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
