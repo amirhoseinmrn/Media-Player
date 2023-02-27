@@ -36,7 +36,7 @@ There are lots of articles available over the internet explaining the definition
 
 > Note that the class diagram at the top of this page includes a view controller; view controllers do exist in MVVM, but their role is minimized.
 
-## How do we implement MVVM in Edecom project?
+## How do we implement MVVM in Media-Player project?
 
 Our directory in project is:
 
