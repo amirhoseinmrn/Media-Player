@@ -10,6 +10,7 @@ import Foundation
 public enum Result<Value> {
     case success(Value)
     case failure(Error)
+    case cancel
 }
 
 public extension Result {
@@ -18,6 +19,8 @@ public extension Result {
         case .success(_):
             return true
         case .failure(_):
+            return false
+        case .cancel:
             return false
         }
     }
@@ -28,6 +31,8 @@ public extension Result {
             return value
         case .failure(_):
             return nil
+        case .cancel:
+            return nil
         }
     }
     
@@ -37,6 +42,8 @@ public extension Result {
             return nil
         case .failure(let error):
             return error
+        case .cancel:
+            return nil
         }
     }
 }
@@ -47,8 +54,10 @@ public extension Result {
         case .success(let value):
             let newValue = transform(value)
             return Result<T>.success(newValue)
-        case .failure(let error):
-            return Result<T>.failure(error)
+        case .failure(let errorResponse):
+            return Result<T>.failure(errorResponse)
+        case .cancel:
+            return Result<T>.cancel
         }
     }
     
@@ -58,6 +67,8 @@ public extension Result {
             return transform(value)
         case .failure(let error):
             return Result<T>.failure(error)
+        case .cancel:
+            return Result<T>.cancel
         }
     }
 }

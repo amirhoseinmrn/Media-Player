@@ -11,6 +11,7 @@ import CoreData
 enum BaseViewModelChange {
     case didSuccess
     case didError(Error)
+    case cancel
     case didChangeNetworkActivityStatus(Bool)
 }
 

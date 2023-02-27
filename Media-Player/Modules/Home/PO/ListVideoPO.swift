@@ -33,6 +33,8 @@ extension ListVideoPO {
                 strongSelf.emit(.didSuccess)
             case .failure(let error):
                 strongSelf.emit(.didError(error))
+            case .cancel:
+                strongSelf.emit(.cancel)
             }
         }
     }

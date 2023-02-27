@@ -24,6 +24,8 @@ extension HomeViewController {
             case .didError(let error):
                 strongSelf.tableView.setEmptyMessage(error.localizedDescription)
                 strongSelf.tableView.reloadData()
+            case .cancel:
+                break
             }
         }
     }
