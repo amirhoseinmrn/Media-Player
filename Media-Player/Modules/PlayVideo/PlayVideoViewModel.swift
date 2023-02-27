@@ -8,9 +8,9 @@
 import Foundation
 
 class PlayVideoViewModel {
-    var url: String
+    var html: String
     
-    init(url: String) {
-        self.url = url
+    init(html: String) {
+        self.html = html
     }
 }
