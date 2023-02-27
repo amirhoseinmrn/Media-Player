@@ -8,6 +8,7 @@ import UIKit
 
 class BaseViewController: UIViewController {
     let defaults = UserDefaults.standard
+    lazy var validOrientation: UIInterfaceOrientationMask = .portrait
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)

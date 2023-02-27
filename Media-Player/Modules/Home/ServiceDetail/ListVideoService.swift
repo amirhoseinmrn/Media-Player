@@ -36,7 +36,6 @@ class ListVideoService: BaseService,
                     let result = Result<Paginable<VideoModel>>.failure(errorModel)
                     completion(result)
                 }
-                
             }
         }
     }

@@ -12,7 +12,6 @@ class PlayVideoViewController: BaseViewController {
     @IBOutlet weak var webView: WKWebView!
     
     var viewModel: PlayVideoViewModel
-    lazy var validOrientation : UIInterfaceOrientationMask = UIInterfaceOrientationMask.portrait
     
     init(viewModel: PlayVideoViewModel) {
         self.viewModel = viewModel

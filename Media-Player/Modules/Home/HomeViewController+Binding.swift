@@ -18,7 +18,6 @@ extension HomeViewController {
             switch change {
             case .didChangeNetworkActivityStatus(_):
                 strongSelf.tableView.setEmptyMessage("Loading data...")
-                break
             case .didSuccess:
                 strongSelf.tableView.reloadData()
             case .didError(let error):
