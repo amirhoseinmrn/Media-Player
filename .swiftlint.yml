@@ -3,8 +3,8 @@ included:
 excluded:
   - Pods
   - Media-PlayerTests
-  - Media-Player/Commons/Extensions/SpecialExtension.swift
-  - Media-Player/Commons/Base/BaseViewModel.swift
+  - Media-Player/Commons/Extensions
+  - Media-Player/Commons/Base/
 analyzer_rules:
   - unused_declaration
   - unused_import
